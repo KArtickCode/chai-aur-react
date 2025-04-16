@@ -1,9 +1,17 @@
 
+import Chai from "./chai"
+
 
 function App() {
+  const username = "cahi aur code"
+
 
   return (
-    <h1>Chai aur react with vite | Kartick</h1>
+    <>
+    <Chai/>
+    <h1>Chai aur react {username}</h1>              // in this {} whatever we write this is treate as the variable name. Thisis evaluates expression 
+    <p>test para</p>
+    </>
   )
 }
 
