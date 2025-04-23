@@ -12,10 +12,25 @@ function App() {
 
   const addValue = () => {
     console.log("clicked",counter);     // in this code we update the value but not changes in UI . In this senary React comes and if we update the value in one places it changes in every where in the code. and this come done by HOOKS
+
     if (counter < 20)
       counter = counter + 1;
+
+    else {
+      // setCounter(prevCounter => prevCounter + 3)
+      counter = counter + 10;
+    }
+
     setCounter(counter)
-    console.log("after clicked",counter); 
+
+    // under the process many changes value can be pass in along as a bunddle
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+
+
+    console.log("after clicked",counter);
   }
 
   const decreaseValue = () => {
